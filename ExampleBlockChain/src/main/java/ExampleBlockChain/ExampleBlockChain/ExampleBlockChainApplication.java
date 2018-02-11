@@ -2,8 +2,8 @@ package ExampleBlockChain.ExampleBlockChain;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import java.sql.Timestamp;
-import java.util.Date;
+
+import java.util.Arrays;
 
 @SpringBootApplication
 public class ExampleBlockChainApplication {
@@ -12,13 +12,15 @@ public class ExampleBlockChainApplication {
 
 		SpringApplication.run(ExampleBlockChainApplication.class, args);
 
-		//Date object
-		Date date= new Date();
-		//getTime() returns current time in milliseconds
-		long time = date.getTime();
-		//Passed the milliseconds to constructor of Timestamp class
-		Timestamp timestamp = new Timestamp(time);
+		Transactions transaction1 = new Transactions("Peter", "Sam", 100L);
+		Transactions transaction2 = new Transactions("Billy", "Matt", 500L);
 
-		Block block = new Block(timestamp,"this is some mock data", previousHash, currentHash)
+		Block genesisBlock = new Block(Arrays.asList(transaction1, transaction2), 0);
+		genesisBlock.hashCode();
+
+
+		System.out.println("transaction1:" + transaction1);
+		System.out.println("transaction2:" + transaction2);
+		
+		}
 	}
-}

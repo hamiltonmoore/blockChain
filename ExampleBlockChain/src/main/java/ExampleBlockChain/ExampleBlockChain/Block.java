@@ -1,25 +1,30 @@
 package ExampleBlockChain.ExampleBlockChain;
 
-import java.sql.Timestamp;
+import java.util.List;
 
 public class Block {
 
-    public Timestamp timestamp;
-    public String data;
-    public int previousHash;
-    public int currentHash;
+    private List<Transactions> transactions;
+    private int previousHash;
 
-    Block(Timestamp timestamp, String data, int previousHash, int currentHash){
-        this.timestamp = timestamp;
-        this.data = data;
+    public Block(List<Transactions> transactions, int previousHash) {
+        this.transactions = transactions;
         this.previousHash = previousHash;
-        this.currentHash = currentHash;
     }
 
-    public int createCurrentHash(){
-        String buildCurrentHash = timestamp + data + previousHash;
-        currentHash = buildCurrentHash.hashCode();
-        return currentHash;
+    public List<Transactions> getTransactions() {
+        return transactions;
     }
-    
+
+    public void setTransactions(List<Transactions> transactions) {
+        this.transactions = transactions;
+    }
+
+    public int getPreviousHash() {
+        return previousHash;
+    }
+
+    public void setPreviousHash(int previousHash) {
+        this.previousHash = previousHash;
+    }
 }
