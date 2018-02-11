@@ -4,10 +4,10 @@ import java.sql.Timestamp;
 
 public class Block {
 
-    private Timestamp timestamp;
-    private String data;
-    private int previousHash;
-    private int currentHash;
+    public Timestamp timestamp;
+    public String data;
+    public int previousHash;
+    public int currentHash;
 
     Block(Timestamp timestamp, String data, int previousHash, int currentHash){
         this.timestamp = timestamp;
@@ -16,4 +16,10 @@ public class Block {
         this.currentHash = currentHash;
     }
 
+    public int createCurrentHash(){
+        String buildCurrentHash = timestamp + data + previousHash;
+        currentHash = buildCurrentHash.hashCode();
+        return currentHash;
+    }
+    
 }
