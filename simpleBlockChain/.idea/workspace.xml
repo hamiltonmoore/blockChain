@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16e8de24-444f-4343-9677-247d01a9082c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../ExampleBlockChain/src/main/java/ExampleBlockChain/ExampleBlockChain/BlockChain.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ExampleBlockChain/src/main/java/ExampleBlockChain/ExampleBlockChain/Block.java" afterPath="$PROJECT_DIR$/../ExampleBlockChain/src/main/java/ExampleBlockChain/ExampleBlockChain/Block.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ExampleBlockChain/src/main/java/ExampleBlockChain/ExampleBlockChain/ExampleBlockChainApplication.java" afterPath="$PROJECT_DIR$/../ExampleBlockChain/src/main/java/ExampleBlockChain/ExampleBlockChain/ExampleBlockChainApplication.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
